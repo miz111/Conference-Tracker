@@ -101,7 +101,7 @@ class AttendeeForm extends React.Component {
 
 
                                 <div className="d-flex justify-content-center mb-3" id="loading-conference-spinner">
-                                    <div className="spinner-grow text-secondary" role="status">
+                                    <div className="spinner-grow text-secondary d-none" role="status">
                                         <span className="visually-hidden">Loading...</span>
                                     </div>
                                 </div>

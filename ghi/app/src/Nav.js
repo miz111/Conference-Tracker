@@ -26,6 +26,12 @@ function Nav() {
                                     presentation</NavLink>
                             </li>
                         </ul>
+                        <form className="d-flex">
+                            <input className="form-control me-2" type="search" placeholder="Search conferences"
+                                aria-label="Search" />
+                            <button className="btn btn-outline-success me-2" type="submit">Search</button>
+                            <NavLink className="btn btn-primary" to="/attendees/new">Attend!</NavLink>
+                        </form>
                     </div>
                 </div>
             </nav>
