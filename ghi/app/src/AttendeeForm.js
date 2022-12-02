@@ -85,7 +85,7 @@ class AttendeeForm extends React.Component {
 
     render() {
         return (
-            <div className="row">
+            <div className="my-5 container">
                 <div className="col col-sm-auto">
                     <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" />
                 </div>

@@ -4,22 +4,45 @@ import LocationForm from './LocationForm';
 import AttendeesList from './AttendeesList';
 import ConferenceForm from './ConferenceForm';
 import AttendeeForm from './AttendeeForm';
+import PresentationForm from './PresentationForm';
+import MainPage from './MainPage';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 
 function App(props) {
   if (props.attendees === undefined) {
-    return null
+    return null;
   }
   return (
-    <>
+    <BrowserRouter>
       <Nav />
-      <div className="container">
-        {/* <LocationForm /> */}
-        {/* <AttendeesList attendees={props.attendees} /> */}
-        {/* {<ConferenceForm />} */}
-        {<AttendeeForm />}
-
-      </div>
-    </>
+      <Routes>
+        {/* <Route path="/">
+          <Route index element={<MainPage />} />
+          <Route path="locations/new" element={<LocationForm />} />
+        </Route> */}
+        <Route path="locations">
+          <Route path="new" element={<LocationForm />} />
+        </Route>
+        <Route path="conferences">
+          <Route path="new" element={<ConferenceForm />} />
+        </Route>
+        <Route path="attendees">
+          <Route path="" element={<AttendeesList attendees={props.attendees} />} />
+          <Route path="new" element={<AttendeeForm />} />
+        </Route>
+        <Route path="presentations">
+          <Route path="new" element={<PresentationForm />} />
+        </Route>
+        <Route path="/">
+          <Route index element={<MainPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
