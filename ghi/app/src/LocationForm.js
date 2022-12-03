@@ -59,7 +59,7 @@ class LocationForm extends React.Component {
     handleRoomCountChange(event) {
         const value = event.target.value;
         this.setState({ roomCount: value })
-    };
+    }
 
     handleCityChange(event) {
         const value = event.target.value;
